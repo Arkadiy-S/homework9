@@ -18,8 +18,6 @@ let i;
 let arrS = s.split(" "); //массив для хранения исходной строки
 let stack = []; // стек для обработки
 let output = 0; // результат
-let op1 = 0; // переменная для 1-го операнда
-let op2 = 0; // переменная для 2-го операнда
 let nTmp = 0; // переменная для 2-го операнда
 
 
@@ -37,9 +35,6 @@ let nTmp = 0; // переменная для 2-го операнда
       else {
         switch (item) { //  если  "на вход"   поступает знак операции - производится вычисление
           case "+":
-            //op1 = +stack.pop();
-            //op2 = +stack.pop();
-            //output = op1 + op2;
             nTmp = stack.pop();
             output = stack.pop() + nTmp;
             stack.push(output);
